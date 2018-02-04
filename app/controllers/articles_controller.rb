@@ -1,5 +1,9 @@
 class ArticlesController < ApplicationController
 
+  def index
+    @articles = Article.all #plural random name
+  end
+  
   def new #handled by 'create' method
     @article = Article.new
   end
