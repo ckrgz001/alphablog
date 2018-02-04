@@ -47,6 +47,6 @@ group :development do
 end
 
 group :production do
-  gem 'pg' #heroku uses postgre not sqllite
+  gem 'pg', '~>0.20' #heroku uses postgre not sqllite
   gem 'rails_12factor'
 end 
