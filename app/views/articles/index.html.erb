@@ -12,8 +12,9 @@
   <tr>
     <td><%= stuff.title %></td>
     <td><%= stuff.description %></td>
-    <td><%= link_to "Edit", edit_article_path(stuff) %></td>
-    <td><%= link_to "SHOW", article_path(stuff) %></td>
+    <td><%= link_to "Edit", edit_article_path(stuff) %></td> 
+    <td><%= link_to "Show", article_path(stuff) %></td> 
+    <td><%= link_to "DELETE", article_path(stuff), method: :delete, data: {confirm: "Are you sure?"}  %></td>
     
   </tr>
   
@@ -21,3 +22,6 @@
     
   
 </table>
+
+
+<%= link_to 'Home', root_path %>

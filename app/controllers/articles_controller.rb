@@ -37,6 +37,13 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
   
+  def destroy
+    @article = Article.find(params[:id])
+    @article.destroy
+    flash[:notice] = "Entry deleted"
+    redirect_to articles_path
+  end
+  
   private
     def article_params
       params.require(:article).permit(:title, :description) #article is top level key, this permits the values (as in key-value pairings) of title and description
