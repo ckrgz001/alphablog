@@ -1,2 +1,61 @@
+$navbar-default-bg:  #A9A9A9;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#logo {
+  float: left;
+  font-size: 2 em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+#star {
+  color: #fff;
+}
+
+.center {
+  text-align: center;
+}
+
+.jumbotron {
+  background-image: asset-url('alphablog.png');
+  background-size: cover;
+  height: 550px;
+}
+
+.jumbotron h1 {
+  color: #fff;
+  text-align: center;
+}
+
+.btn-what {
+  font-size: 1.5em;
+  background-color: maroon;
+}
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}
+footer ul {
+  float: right;
+  list-style: none;
+}
