@@ -49,4 +49,4 @@ end
 group :production do
   gem 'pg' #heroku uses postgre not sqllite
   gem 'rails_12factor'
-  end 
+end 
