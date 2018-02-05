@@ -15,6 +15,7 @@ class ArticlesController < ApplicationController
   
   def create
     @article = Article.new(article_params) #create an aritcle based on passed in params/ see private method
+    @article.user = User.last
     if @article.save
       flash[:success] = "Article successfully created."
       redirect_to article_path(@article)
