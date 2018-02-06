@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  
+  
+  root 'pages#home'
+  get 'about', to: 'pages#about'
+  
+  resources :articles #gave us articles path - post/edit/update/delete/show/indexclear
+  
+  get 'signup', to: 'users#new'
+  resources :users, except: [:new]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -7,11 +16,6 @@ Rails.application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-  
-  root 'pages#home'
-  get 'about', to: 'pages#about'
-  
-  resources :articles #gave us articles path - post/edit/update/delete/show/indexclear
   
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
