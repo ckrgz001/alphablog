@@ -12,7 +12,7 @@
                   last updated: <%= time_ago_in_words(stuff.updated_at) %>. </small>
               </div>
           </div>
-          <% if logged_in? && current_user == stuff.user %>
+          <% if logged_in? && (current_user == stuff.user || current_user.admin?)%>
             <div class="article-actions">
               <%= link_to "Edit", edit_article_path(stuff), class: "btn btn-xs btn-primary" %>
               <%= link_to "DELETE", article_path(stuff), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-xs btn-danger" %>
